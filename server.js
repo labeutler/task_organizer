@@ -10,6 +10,7 @@ app.use(express.json());
 app.use('/', htmlRoutes);
 app.use(express.static('public'));
 app.use('/api', apiRoutes);
+app.use(express.urlencoded({ extended: true }));
 
 
 app.get("/", (req, res) => res.send("Hello bootcamp, what's up?"));

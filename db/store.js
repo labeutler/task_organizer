@@ -22,7 +22,7 @@ class Store {
     getNotes() {
         return this.read().then((notes) => {
             let parsedNotes;
-            
+
             try {
                 parsedNotes = [].concat(JSON.parse(notes));
             } catch (err) {
@@ -42,11 +42,13 @@ class Store {
         const newNote = { title, text, id: uuidv4() };
 
         return this.getNotes().then((notes) => [...notes, newNote])
-            .then((update) => this.write(update)).then(() => newNote);
+            .then((update) => this.write(update))
+            .then(() => newNote);
     }
 
     removeNote(id) {
-        return this.getNotes().then((notes) => notes.filter((note) => note.id !== id))
+        return this.getNotes()
+            .then((notes) => notes.filter((note) => note.id !== id))
             .then((findNotes) => this.write(findNotes));
     }
 }
