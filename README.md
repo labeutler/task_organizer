@@ -35,7 +35,7 @@ THEN I am presented with empty fields to enter a new note title and the note’s
 
 ## Installation
 
-What are the steps required to install your project? Provide a step-by-step description of how to get the development environment running.
+Link to app: [Task Organizer](https://sleepy-tor-26670.herokuapp.com/)
 
 ## Usage
 
