@@ -12,9 +12,6 @@ app.use(express.static('public'));
 app.use('/api', apiRoutes);
 app.use(express.urlencoded({ extended: true }));
 
-
-app.get("/", (req, res) => res.send("Hello bootcamp, what's up?"));
-
 // app.get("/notes", (req, res) => res.sendFile(notesHTMLPath));
 
 app.listen(PORT, () => {
